@@ -126,29 +126,15 @@
             <version>${spring-framework.version}</version>
             <scope>test</scope>
         </dependency>
-
-
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
             <version>4.11</version>
             <scope>test</scope>
         </dependency>
-
-        <dependency>
-            <groupId>org.apache.tomcat.maven</groupId>
-            <artifactId>tomcat7-maven-plugin</artifactId>
-            <version>2.2</version>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.tomcat</groupId>
-            <artifactId>tomcat-catalina</artifactId>
-            <version>7.0.27</version>
-            <scope>provided</scope>
-        </dependency>
     </dependencies>
-
     <build>
+
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -159,56 +145,14 @@
                     <target>${java.version}</target>
                 </configuration>
             </plugin>
+
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-war-plugin</artifactId>
-                <version>2.3</version>
+                <version>3.2.2</version>
                 <configuration>
-                    <failOnMissingWebXml>false</failOnMissingWebXml>
                 </configuration>
             </plugin>
-
-            <!-- 配置Tomcat插件 -->
-            <!--<plugin>-->
-            <!--<groupId>org.apache.tomcat.maven</groupId>-->
-            <!--<artifactId>tomcat7-maven-plugin</artifactId>-->
-            <!--<version>2.2</version>-->
-            <!--<configuration>-->
-            <!--&lt;!&ndash; 这里配置端口号和访问路径 &ndash;&gt;-->
-            <!--<port>8080</port>-->
-            <!--<uriEncoding>UTF-8</uriEncoding>-->
-            <!--<path>/highlight_springmvc4</path> &lt;!&ndash;项目在tomcat服务器中的部署路径&ndash;&gt;-->
-            <!--<url>http://localhost:8080/manager/text</url> &lt;!&ndash;项目访问路径&ndash;&gt;-->
-            <!--<username>tomcat</username>-->
-            <!--<password>tomcat</password>-->
-            <!--&lt;!&ndash;<update>true</update>&ndash;&gt;-->
-            <!--</configuration>-->
-            <!--</plugin>-->
-
-            <!--<plugin>-->
-            <!--<groupId>org.apache.tomcat.maven</groupId>-->
-            <!--<artifactId>tomcat7-maven-plugin</artifactId>-->
-            <!--<version>2.2</version>-->
-            <!--<configuration>-->
-            <!--<port>9090</port>-->
-            <!--<path>/</path>-->
-            <!--</configuration>-->
-            <!--</plugin>-->
-
-
-            <!--<plugin>-->
-            <!--<groupId>org.apache.tomcat.maven</groupId>-->
-            <!--<artifactId>tomcat7-maven-plugin</artifactId>-->
-            <!--<version>2.2</version>-->
-            <!--<configuration>-->
-            <!--&lt;!&ndash; 这里配置端口号和访问路径 &ndash;&gt;-->
-            <!--<port>8080</port>-->
-            <!--<uriEncoding>UTF-8</uriEncoding>-->
-            <!--<path>/highlight_springmvc4</path> &lt;!&ndash;项目在tomcat服务器中的部署路径&ndash;&gt;-->
-            <!--<server>tomcat7</server>-->
-            <!--<update>true</update>-->
-            <!--</configuration>-->
-            <!--</plugin>-->
         </plugins>
     </build>
 </project>
